@@ -6,7 +6,7 @@ import { useNavigate, createSearchParams } from 'react-router-dom';
 const Search = () => {
 
   // get navigate function
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const searchInputRef = useRef();
 
@@ -23,7 +23,7 @@ const Search = () => {
     // imperatively redirect with useNavigate() returned function
     navigate({
       pathname: 'search',
-      searcg: `?${query}`
+      search: `?${query}`
     })
   };
 
